@@ -8,12 +8,15 @@ public class Role
 	private int id;
 	private int user_id;
 	private String name; //用户创建角色时,需定义名字.
+	private int level;//等级
+	private int exp;//当前经验所获得经验
+	private double face_angel;//面向角度
 	
 	
 	/**
 	 * 角色的基本原型,这个原型是决定角色技能.
 	 * */
-	private int unit_type;
+	private int role_type;
 		
 	/**
 	 *角色已学到的技能. 

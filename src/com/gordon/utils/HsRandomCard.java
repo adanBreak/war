@@ -1,6 +1,9 @@
 package com.gordon.utils;
 
-class HsRandomCard 
+import java.util.HashMap;
+import java.util.Map;
+
+public class HsRandomCard 
 {	
 	public static void main(String[]args)
 	{
@@ -55,14 +58,22 @@ class HsRandomCard
 				"´óÂİË¿","ÒÁÉªÀ­","°ÂÄá¿ËÏ£ÑÇ","À¶Áú","»ÆÁú","ºìÁú","ËÀÍöÖ®Òí","º£¾ŞÈË","É½Áë","ÈÛºË"};		
 		
 				int size=cards.length;
+				System.out.println(size);
 				for(int i=0;i<size;i++)
 				{
-					int n=i+(int)(Math.random()*size);
+					int n=i+(int)(Math.random()*(size-i));					
 					String tmp=cards[i];
 					cards[i]=cards[n];
 					cards[n]=tmp;
 					System.out.println(cards[i]);
 				}
+				
+				Map<String,Integer>map=new HashMap<String,Integer>();
+				for(int i=0;i<size;i++)
+				{
+					map.put(cards[i],1);
+				}
+				System.out.println(map.size());
 	}
 
 }
